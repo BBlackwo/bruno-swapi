@@ -1,10 +1,10 @@
 {
   "summary": {
-    "totalAssertions": 0,
-    "passedAssertions": 0,
+    "totalAssertions": 2,
+    "passedAssertions": 2,
     "failedAssertions": 0,
-    "totalTests": 0,
-    "passedTests": 0,
+    "totalTests": 1,
+    "passedTests": 1,
     "failedTests": 0
   },
   "results": [
@@ -19,7 +19,7 @@
         "statusText": "OK",
         "headers": {
           "server": "nginx/1.16.1",
-          "date": "Sun, 01 Oct 2023 23:09:12 GMT",
+          "date": "Sun, 01 Oct 2023 23:24:07 GMT",
           "content-type": "application/json",
           "transfer-encoding": "chunked",
           "connection": "close",
@@ -103,7 +103,7 @@
         "statusText": "OK",
         "headers": {
           "server": "nginx/1.16.1",
-          "date": "Sun, 01 Oct 2023 23:09:20 GMT",
+          "date": "Sun, 01 Oct 2023 23:24:15 GMT",
           "content-type": "application/json",
           "transfer-encoding": "chunked",
           "connection": "close",
@@ -633,7 +633,7 @@
         "statusText": "OK",
         "headers": {
           "server": "nginx/1.16.1",
-          "date": "Sun, 01 Oct 2023 23:09:24 GMT",
+          "date": "Sun, 01 Oct 2023 23:24:19 GMT",
           "content-type": "application/json",
           "transfer-encoding": "chunked",
           "connection": "close",
@@ -905,8 +905,31 @@
           ]
         }
       },
-      "assertionResults": [],
-      "testResults": []
+      "assertionResults": [
+        {
+          "uid": "SkGZZgXzn5yhgjc5tuO-G",
+          "lhsExpr": "res.status",
+          "rhsExpr": "200",
+          "rhsOperand": "200",
+          "operator": "eq",
+          "status": "pass"
+        },
+        {
+          "uid": "2mF2A5jXleFXpwOKO5Yki",
+          "lhsExpr": "res.body.count",
+          "rhsExpr": "82",
+          "rhsOperand": "82",
+          "operator": "eq",
+          "status": "pass"
+        }
+      ],
+      "testResults": [
+        {
+          "description": "should be able to get people",
+          "status": "pass",
+          "uid": "fNuXu6WNDlCeBY6cyHPrz"
+        }
+      ]
     },
     {
       "request": {
@@ -919,7 +942,7 @@
         "statusText": "OK",
         "headers": {
           "server": "nginx/1.16.1",
-          "date": "Sun, 01 Oct 2023 23:09:25 GMT",
+          "date": "Sun, 01 Oct 2023 23:24:21 GMT",
           "content-type": "application/json",
           "transfer-encoding": "chunked",
           "connection": "close",
@@ -957,6 +980,53 @@
           "created": "2014-12-09T13:50:51.644000Z",
           "edited": "2014-12-20T21:17:56.891000Z",
           "url": "https://swapi.dev/api/people/1/"
+        }
+      },
+      "assertionResults": [],
+      "testResults": []
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "https://swapi.dev/api/people/72",
+        "headers": {}
+      },
+      "response": {
+        "status": 200,
+        "statusText": "OK",
+        "headers": {
+          "server": "nginx/1.16.1",
+          "date": "Sun, 01 Oct 2023 23:24:22 GMT",
+          "content-type": "application/json",
+          "transfer-encoding": "chunked",
+          "connection": "close",
+          "vary": "Accept, Cookie",
+          "x-frame-options": "SAMEORIGIN",
+          "etag": "\"4e9d9bf2d78519b05c26be7d6a53d7e2\"",
+          "allow": "GET, HEAD, OPTIONS",
+          "strict-transport-security": "max-age=15768000"
+        },
+        "data": {
+          "name": "Lama Su",
+          "height": "229",
+          "mass": "88",
+          "hair_color": "none",
+          "skin_color": "grey",
+          "eye_color": "black",
+          "birth_year": "unknown",
+          "gender": "male",
+          "homeworld": "https://swapi.dev/api/planets/10/",
+          "films": [
+            "https://swapi.dev/api/films/5/"
+          ],
+          "species": [
+            "https://swapi.dev/api/species/32/"
+          ],
+          "vehicles": [],
+          "starships": [],
+          "created": "2014-12-20T17:30:50.416000Z",
+          "edited": "2014-12-20T21:17:50.473000Z",
+          "url": "https://swapi.dev/api/people/72/"
         }
       },
       "assertionResults": [],

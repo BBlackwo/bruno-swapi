@@ -13,3 +13,13 @@ assert {
   res.status: 200
   res.body.count: 82
 }
+
+tests {
+  test("should be able to get people", function() {
+    const data = res.getBody();
+    expect(res.getStatus()).to.equal(200);
+    expect(data.count).to.be.a('number');
+    expect(data.count).to.equal(82);
+  });
+  
+}
