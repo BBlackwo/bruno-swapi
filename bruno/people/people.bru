@@ -8,3 +8,8 @@ get {
   url: {{baseUrl}}/people/
   body: none
 }
+
+assert {
+  res.status: 200
+  res.body.count: 82
+}
