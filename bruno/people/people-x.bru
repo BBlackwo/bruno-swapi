@@ -1,0 +1,22 @@
+meta {
+  name: /people-x
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/people/{{personId}}
+  body: none
+}
+
+script:pre-request {
+  function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min);
+  }
+  
+  const randomPerson = getRandomInt(1, 82);
+  
+  bru.setVar("personId", randomPerson);
+}
